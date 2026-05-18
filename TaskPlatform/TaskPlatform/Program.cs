@@ -23,6 +23,8 @@ namespace TaskPlatform
 
             builder.Services.AddAutoMapperConfig();
 
+            builder.Services.AddJwtAuthentication(builder.Configuration);
+
             builder.Services.AddControllers();
 
             builder.Services.AddBusinessServices();
@@ -41,6 +43,8 @@ namespace TaskPlatform
             }
 
             app.UseHttpsRedirection();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 

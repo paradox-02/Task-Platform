@@ -8,6 +8,7 @@ namespace TaskPlatform.Extensions
         public static void AddBusinessServices(this IServiceCollection services)
         {
             services.AddScoped<UserService>();
+            services.AddScoped<JwtService>();
         }
     }
 }
