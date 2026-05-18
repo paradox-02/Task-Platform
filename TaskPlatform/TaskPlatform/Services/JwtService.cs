@@ -26,7 +26,9 @@ namespace TaskPlatform.Services
             {
                 new Claim(ClaimTypes.NameIdentifier,userId.ToString()),
 
-                new Claim(ClaimTypes.Name,username)
+                new Claim(ClaimTypes.Name,username),
+
+                new Claim(ClaimTypes.Role,"Admin")
             };
 
             var token = new JwtSecurityToken(
